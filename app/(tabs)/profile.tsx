@@ -10,8 +10,8 @@ import {
 import * as ImagePicker from "expo-image-picker";
 import { ThemedView } from "@/components/ThemedView";
 import { ThemedText } from "@/components/ThemedText";
-import { useAuth } from "@/contexts/AuthContext";
 import { IconSymbol } from "@/components/ui/IconSymbol";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function ProfileScreen() {
   const { userProfile, updateProfile } = useAuth();

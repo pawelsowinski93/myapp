@@ -9,10 +9,11 @@ import {
   Image,
   Alert,
 } from "react-native";
-import { Message, useChat } from "@/contexts/ChatContext";
+import { Message } from "@/contexts/ChatContext";
 import { ThemedView } from "@/components/ThemedView";
 import { ThemedText } from "@/components/ThemedText";
 import { IconSymbol } from "@/components/ui/IconSymbol";
+import { useChat } from "@/hooks/useChat";
 
 export default function ChatScreen() {
   const { messages, isLoading, sendMessage, pickImage } = useChat();

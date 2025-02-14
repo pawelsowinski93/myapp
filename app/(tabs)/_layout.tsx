@@ -1,7 +1,6 @@
 import { Tabs } from "expo-router";
 import React, { useEffect } from "react";
 import { Platform, Pressable, StyleSheet, Image } from "react-native";
-import { useAuth } from "@/contexts/AuthContext";
 import { router } from "expo-router";
 
 import { HapticTab } from "@/components/HapticTab";
@@ -10,6 +9,7 @@ import TabBarBackground from "@/components/ui/TabBarBackground";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
 import { ThemedView } from "@/components/ThemedView";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();

@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { StyleSheet, TextInput, Alert } from "react-native";
 import { router } from "expo-router";
-import { useAuth } from "@/contexts/AuthContext";
 import { ThemedView } from "@/components/ThemedView";
 import { ThemedText } from "@/components/ThemedText";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function LoginScreen() {
   const [email, setEmail] = useState("");

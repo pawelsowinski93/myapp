@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback } from "react";
+import React, { createContext, useState, useCallback } from "react";
 import * as ImagePicker from "expo-image-picker";
 
 export interface Message {
@@ -24,7 +24,7 @@ interface ChatContextType {
   clearChat: () => void;
 }
 
-const ChatContext = createContext<ChatContextType | null>(null);
+export const ChatContext = createContext<ChatContextType | null>(null);
 
 export function ChatProvider({ children }: { children: React.ReactNode }) {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -81,7 +81,6 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
         };
         setMessages((prev) => [...prev, aiMessage]);
 
-        // Mock streaming response
         const response = attachment
           ? `I see you've shared an image. Here's my response about: "${content}"`
           : `This is a streaming response to: "${content}"`;
@@ -124,12 +123,4 @@ export function ChatProvider({ children }: { children: React.ReactNode }) {
       {children}
     </ChatContext.Provider>
   );
-}
-
-export function useChat() {
-  const context = useContext(ChatContext);
-  if (!context) {
-    throw new Error("useChat must be used within a ChatProvider");
-  }
-  return context;
 }
