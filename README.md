@@ -1,50 +1,96 @@
-# Welcome to your Expo app 👋
+# React Native Chat Application
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Overview
 
-## Get started
+This project is a **React Native application** featuring authentication, a mocked chat interface, file/image attachments in the chat, and user profile management. The app is designed to be well-structured, maintainable, and showcase expertise in React Native development.
 
-1. Install dependencies
+## Features
 
-   ```bash
+### 1. Authentication (Mocked)
+
+- Simple login screen with **email and password authentication**.
+- Hardcoded credentials:
+  - **Email:** `test@example.com`
+  - **Password:** `password123`
+- Securely stores login state.
+- Redirects users to the **Chat Page** upon successful login.
+
+### 2. Chat Page (Mocked)
+
+- Interactive **chat interface** for sending and receiving messages.
+- The chat is **fully mocked** without actual OpenAI API integration.
+- Stores chat history in memory for the session.
+
+#### File Upload & Sharing
+
+- Users can **attach images or files** from their device in chat.
+- Preview uploaded files before sending.
+- Supports multiple file types with user feedback for unsupported formats.
+
+#### Optional: Speech-to-Text
+
+- **Speech-to-text functionality** for voice message input.
+- Converts speech to text before sending.
+
+### 3. Profile Page
+
+- Displays **user details** (name, email, profile picture).
+- Allows users to **edit their profile** with local storage for changes.
+
+### 4. Navigation
+
+- Implemented with **React Navigation**.
+- Enables seamless switching between **Chat** and **Profile** pages.
+- Includes a **navigation bar** for easy access.
+
+## Setup Instructions
+
+### Prerequisites
+
+- Install **Node.js** and **npm** or **yarn**.
+- Install **Expo CLI**.
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/chat-app.git
+   cd chat-app
+   ```
+2. Install dependencies:
+   ```sh
    npm install
+   # or
+   yarn install
+   ```
+3. Start the development server:
+   ```sh
+   npm run start
+   ```
+   Or use specific platform commands:
+   ```sh
+   npm run android   # For Android
+   npm run ios       # For iOS
+   npm run web       # For Web
    ```
 
-2. Start the app
+## Evaluation Criteria
 
-   ```bash
-    npx expo start
-   ```
+Submissions will be assessed based on:
 
-In the output, you'll find options to open the app in a
+- **Code Quality:** Clean, modular, maintainable structure.
+- **User Experience:** Intuitive UI, smooth interactions.
+- **Functionality:** Proper implementation of authentication, chat, and file upload.
+- **Performance:** Efficient handling of chat and user interactions.
+- **State Management:** Proper application state handling.
+- **Bonus:** Speech-to-text functionality for improved usability.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Submission Guidelines
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- Upload your project to **GitHub or GitLab**.
+- Include this **README** with setup instructions.
+- Provide a **demo video** or **screenshots** showcasing the app.
 
-## Get a fresh project
+---
 
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### 🔥 Happy Coding! 🚀
